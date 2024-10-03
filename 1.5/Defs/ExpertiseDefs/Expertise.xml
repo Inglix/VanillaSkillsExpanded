@@ -277,33 +277,7 @@
       <VSE_RockChunkChance>0.05</VSE_RockChunkChance>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef>
-    <defName>Pharmacologist</defName>
-    <label>Synthesizing</label>
-    <skill>Intellectual</skill>
-    <description>An expertise in creating complex drugs efficiently.</description>
-    <statOffsets>
-      <DrugSynthesisSpeed>0.05</DrugSynthesisSpeed>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef MayRequire="ludeon.rimworld.ideology">
-    <defName>Hacker</defName>
-    <label>Hacking</label>
-    <skill>Intellectual</skill>
-    <description>An expertise in hacking terminals and ancient systems.</description>
-    <statOffsets>
-      <HackingSpeed>0.05</HackingSpeed>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef>
-    <defName>Researcher</defName>
-    <label>Researching</label>
-    <skill>Intellectual</skill>
-    <description>An expertise in researching new technologies.</description>
-    <statOffsets>
-      <ResearchSpeed>0.05</ResearchSpeed>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
+
   <VSE.Expertise.ExpertiseDef>
     <defName>Forager</defName>
     <label>Foraging</label>
@@ -370,4 +344,44 @@
       <ConversionPower>0.05</ConversionPower>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
+	
+  <!-- INTELLECTUAL -->
+  <VSE.Expertise.ExpertiseDef>
+    <defName>Researcher</defName>
+    <label>Researching</label>
+    <skill>Intellectual</skill>
+    <description>Expertise in performing research and operating scanning equipment.</description>
+    <statOffsets>
+      <ResearchSpeed>0.05</ResearchSpeed>
+      <EntityStudyRate MayRequire="ludeon.rimworld.anomaly">0.05</EntityStudyRate>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  <VSE.Expertise.ExpertiseDef>
+    <defName>Pharmacologist</defName>
+    <label>Synthesizing</label>
+    <skill>Intellectual</skill>
+    <description>Expertise in synthesizing complex chemical drugs.</description>
+    <statOffsets>
+      <DrugSynthesisSpeed>0.05</DrugSynthesisSpeed>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  <VSE.Expertise.ExpertiseDef>
+    <defName>Bookworm</defName>
+    <label>Speed-reading</label>
+    <skill>Intellectual</skill>
+    <description>Expertise in rapidly consuming written material.</description>
+    <statOffsets>
+      <ReadingSpeed>0.04</ReadingSpeed>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  <VSE.Expertise.ExpertiseDef MayRequire="ludeon.rimworld.ideology">
+    <defName>Hacker</defName>
+    <label>Hacking</label>
+    <skill>Intellectual</skill>
+    <description>Expertise in hacking computer terminals.</description>
+    <statOffsets>
+      <HackingSpeed>0.05</HackingSpeed>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  
 </Defs>
