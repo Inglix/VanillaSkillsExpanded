@@ -24,4 +24,11 @@
         <xpath>/Defs/RecipeDef[defName="Make_ComponentSpacer"]/workSpeedStat</xpath>
         <value><workSpeedStat>VSE_ComponentCraftingSpeed</workSpeedStat></value>
     </Operation>
+    
+    <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/StatDef[defName="MedicalTendQuality"]/postProcessCurve/points</xpath>
+      <value>
+        <li>(8.0, 2.5)</li>
+      </value>
+    </Operation>
 </Patch>

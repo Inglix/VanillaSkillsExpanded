@@ -213,34 +213,7 @@
       <VSE_ComponentCraftingSpeed>0.05</VSE_ComponentCraftingSpeed>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef>
-    <defName>Surgeon</defName>
-    <label>Surgery</label>
-    <skill>Medicine</skill>
-    <description>An expertise in performing safe and effective surgeries.</description>
-    <statOffsets>
-      <SurgerySuccessChanceFactor>0.05</SurgerySuccessChanceFactor>
-      <MedicalSurgerySuccessChance>0.05</MedicalSurgerySuccessChance>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef>
-    <defName>BattlefieldMedic</defName>
-    <label>First Aid</label>
-    <skill>Medicine</skill>
-    <description>An expertise at rapid treatment and medical tend speed.</description>
-    <statOffsets>
-      <MedicalTendSpeed>0.05</MedicalTendSpeed>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef>
-    <defName>InfectiousDiseaseExpert</defName>
-    <label>Nursing</label>
-    <skill>Medicine</skill>
-    <description>An expertise in caring for ill patients, suffering from various diseases.</description>
-    <statOffsets>
-      <MedicalTendQuality>0.05</MedicalTendQuality>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
+  
   <VSE.Expertise.ExpertiseDef>
     <defName>Driller</defName>
     <label>Drilling</label>
@@ -314,7 +287,28 @@
       <PlantWorkSpeed>0.05</PlantWorkSpeed>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
-
+  
+  <!-- MEDICAL -->
+  <VSE.Expertise.ExpertiseDef>
+    <defName>Surgeon</defName>
+    <label>Surgery</label>
+    <skill>Medicine</skill>
+    <description>Expertise in rapidly performing safe and effective surgeries.</description>
+    <statOffsets>
+      <MedicalOperationSpeed>0.05</MedicalOperationSpeed>
+      <MedicalSurgerySuccessChance>0.05</MedicalSurgerySuccessChance>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  <VSE.Expertise.ExpertiseDef>
+    <defName>BattlefieldMedic</defName>
+    <label>Nursing</label>
+    <skill>Medicine</skill>
+    <description>Expertise in rapid and effective treatment of wounds or illnesses.</description>
+    <statOffsets>
+      <MedicalTendSpeed>0.05</MedicalTendSpeed>
+      <MedicalTendQuality>0.05</MedicalTendQuality>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
   
   <!-- SOCIAL -->
   <VSE.Expertise.ExpertiseDef>
