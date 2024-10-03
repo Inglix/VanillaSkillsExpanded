@@ -288,6 +288,26 @@
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   
+  <!-- ARTISTIC -->
+  <VSE.Expertise.ExpertiseDef>
+    <defName>QualityExpert</defName>
+    <label>Exquisite Artistry</label>
+    <skill>Artistic</skill>
+    <description>Expertise in creating works of art with increased quality.</description>
+    <statOffsets>
+      <VSE_ArtQuality>0.05</VSE_ArtQuality>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  <VSE.Expertise.ExpertiseDef>
+    <defName>QuantityExpert</defName>
+    <label>Prolific Artistry</label>
+    <skill>Artistic</skill>
+    <description>Expertise in creating works of art quickly and efficiently.</description>
+    <statOffsets>
+      <VSE_ArtSpeed>0.05</VSE_ArtSpeed>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  
   <!-- MEDICAL -->
   <VSE.Expertise.ExpertiseDef>
     <defName>Surgeon</defName>
