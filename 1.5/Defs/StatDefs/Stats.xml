@@ -166,32 +166,4 @@
       <toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
       <disableIfSkillDisabled>Mining</disableIfSkillDisabled>
     </StatDef>
-    <StatDef>
-      <defName>VSE_RecruitRate</defName>
-      <label>recruitment rate</label>
-      <description>How fast this pawn can recruit prisoners to the colony.</description>
-      <category>PawnSocial</category>
-      <defaultBaseValue>1</defaultBaseValue>
-      <minValue>0</minValue>
-      <toStringStyle>PercentOne</toStringStyle>
-      <toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
-      <disableIfSkillDisabled>Social</disableIfSkillDisabled>
-      <statFactors>
-        <li>NegotiationAbility</li>
-      </statFactors>
-    </StatDef>
-    <StatDef>
-      <defName>VSE_PeaceTalksChance</defName>
-      <label>peace talks success chance</label>
-      <description>How likely this pawn is to succeed at peace talks.</description>
-      <category>PawnSocial</category>
-      <defaultBaseValue>1</defaultBaseValue>
-      <minValue>0</minValue>
-      <toStringStyle>PercentOne</toStringStyle>
-      <toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
-      <disableIfSkillDisabled>Social</disableIfSkillDisabled>
-      <statFactors>
-        <li>NegotiationAbility</li>
-      </statFactors>
-    </StatDef>
 </Defs>

@@ -314,34 +314,38 @@
       <PlantWorkSpeed>0.05</PlantWorkSpeed>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
+
+  
+  <!-- SOCIAL -->
   <VSE.Expertise.ExpertiseDef>
-    <defName>Warden</defName>
-    <label>Wardening</label>
+    <defName>Proselytizer</defName>
+    <label>Influencing</label>
     <skill>Social</skill>
-    <description>An expertise in handling prisoners and slaves, recruiting them and arresting them if needed.</description>
+    <description>Expertise in influencing the opinions and ideological beliefs of others.</description>
     <statOffsets>
-      <ArrestSuccessChance>0.05</ArrestSuccessChance>
-      <SuppressionPower MayRequire="ludeon.rimworld.ideology">0.05</SuppressionPower>
-      <VSE_RecruitRate>0.05</VSE_RecruitRate>
+      <SocialImpact>0.05</SocialImpact>
+      <ConversionPower MayRequire="ludeon.rimworld.ideology">0.05</ConversionPower>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   <VSE.Expertise.ExpertiseDef>
     <defName>Negotiator</defName>
     <label>Negotiating</label>
     <skill>Social</skill>
-    <description>An expertise in handling negotiations and trading.</description>
+    <description>Expertise in handling negotiation and recruitment.</description>
     <statOffsets>
       <TradePriceImprovement>0.05</TradePriceImprovement>
-      <VSE_PeaceTalksChance>0.05</VSE_PeaceTalksChance>
+      <NegotiationAbility>0.05</NegotiationAbility>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef MayRequire="ludeon.rimworld.ideology">
-    <defName>Proselytizer</defName>
-    <label>Proselytizing</label>
+  <VSE.Expertise.ExpertiseDef>
+    <defName>Warden</defName>
+    <label>Suppressing</label>
     <skill>Social</skill>
-    <description>An expertise in converting others to their own ways of thinking.</description>
+    <description>Expertise in apprehending others and suppressing their will to escape.</description>
     <statOffsets>
-      <ConversionPower>0.05</ConversionPower>
+      <ArrestSuccessChance>0.05</ArrestSuccessChance>
+      <SuppressionPower MayRequire="ludeon.rimworld.ideology">0.05</SuppressionPower>
+      <ActivitySuppressionRate MayRequire="ludeon.rimworld.anomaly">0.00825</ActivitySuppressionRate>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
 	

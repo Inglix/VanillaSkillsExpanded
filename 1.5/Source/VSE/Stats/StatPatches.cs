@@ -37,10 +37,6 @@ public static class StatPatches
             transpiler: new(myType, nameof(ConstructionQualityTranspiler)));
         harm.Patch(AccessTools.Method(typeof(Mineable), nameof(Mineable.TrySpawnYield), new[] { typeof(Map), typeof(bool), typeof(Pawn) }),
             transpiler: new(myType, nameof(RockChunkChanceTranspiler)));
-        harm.Patch(AccessTools.Method(typeof(InteractionWorker_RecruitAttempt), nameof(InteractionWorker_RecruitAttempt.Interacted)),
-            transpiler: new(myType, nameof(RecruitStatTranspiler)));
-        harm.Patch(AccessTools.Method(typeof(PeaceTalks), nameof(PeaceTalks.GetBadOutcomeWeightFactor), new[] { typeof(Pawn), typeof(Caravan) }),
-            transpiler: new(myType, nameof(PeaceTalksStatTranspiler)));
     }
 
     public static void AdjustArmorPenetration(Pawn attacker, ref float __result)
@@ -105,12 +101,6 @@ public static class StatPatches
 
     public static IEnumerable<CodeInstruction> RepairStatTranspiler(IEnumerable<CodeInstruction> instructions) =>
         instructions.StatReplacer(nameof(StatDefOf.ConstructionSpeed), nameof(MoreStatDefOf.VSE_RepairSpeed));
-
-    public static IEnumerable<CodeInstruction> RecruitStatTranspiler(IEnumerable<CodeInstruction> instructions) =>
-        instructions.StatReplacer(nameof(StatDefOf.NegotiationAbility), nameof(MoreStatDefOf.VSE_RecruitRate));
-
-    public static IEnumerable<CodeInstruction> PeaceTalksStatTranspiler(IEnumerable<CodeInstruction> instructions) =>
-        instructions.StatReplacer(nameof(StatDefOf.NegotiationAbility), nameof(MoreStatDefOf.VSE_PeaceTalksChance));
 
     public static IEnumerable<CodeInstruction> RockChunkChanceTranspiler(IEnumerable<CodeInstruction> instructions)
     {

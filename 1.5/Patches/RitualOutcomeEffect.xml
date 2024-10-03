@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Extend post process curves for speech and conversion rituals to allow expertise bonus for SocialImpact to impact the outcome -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RitualOutcomeEffectDef[defName="AttendedSpeech"]/comps/li[@Class="RitualOutcomeComp_PawnStatScaled"]/curve/points</xpath>
+		<value>
+			<li>(2.1, 0.5)</li>
+			<li>(2.8, 0.6)</li>
+			<li>(3.6, 0.7)</li>
+			<li>(4.3, 0.8)</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RitualOutcomeEffectDef[defName="Conversion"]/comps/li[@Class="RitualOutcomeComp_PawnStatScaled"]/curve/points</xpath>
+		<value>
+			<li>(2.1, 0.33)</li>
+			<li>(2.8, 0.34)</li>
+			<li>(4.3, 0.35)</li>
+		</value>
+	</Operation>
+</Patch>
