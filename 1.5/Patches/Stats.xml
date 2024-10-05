@@ -1,34 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[@Name="SculptureBase"]/recipeMaker/workSpeedStat</xpath>
-        <value><workSpeedStat>VSE_ArtSpeed</workSpeedStat></value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[@Name="ApparelMakeableBase"]/recipeMaker/workSpeedStat</xpath>
-        <value><workSpeedStat>VSE_TailoringSpeed</workSpeedStat></value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[@Name="BaseMakeableGun"]/recipeMaker/workSpeedStat</xpath>
-        <value><workSpeedStat>VSE_WeaponCreationSpeed</workSpeedStat></value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[@Name="BaseMeleeWeapon"]/recipeMaker/workSpeedStat</xpath>
-        <value><workSpeedStat>VSE_WeaponCreationSpeed</workSpeedStat></value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/RecipeDef[defName="Make_ComponentIndustrial"]/workSpeedStat</xpath>
-        <value><workSpeedStat>VSE_ComponentCraftingSpeed</workSpeedStat></value>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <xpath>/Defs/RecipeDef[defName="Make_ComponentSpacer"]/workSpeedStat</xpath>
-        <value><workSpeedStat>VSE_ComponentCraftingSpeed</workSpeedStat></value>
-    </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef/recipeMaker[workSkill[text()="Crafting"]][workSpeedStat[text()="GeneralLaborSpeed"]]/workSpeedStat</xpath>
+    <value>
+      <workSpeedStat>VSE_CraftingSpeed</workSpeedStat>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[workSkill[text()="Crafting"]][workSpeedStat[text()="GeneralLaborSpeed"]]/workSpeedStat</xpath>
+    <value>
+      <workSpeedStat>VSE_CraftingSpeed</workSpeedStat>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef/recipeMaker[workSkill[text()="Artistic"]][workSpeedStat[text()="GeneralLaborSpeed"]]/workSpeedStat</xpath>
+    <value>
+      <workSpeedStat>VSE_ArtSpeed</workSpeedStat>
+    </value>
+  </Operation>
+
+  <!-- Disable all the original patches in favor of new ones searching for Crafting/Artistic workSkill and GeneralLaborSpeed workSpeedStat 
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[@Name="SculptureBase"]/recipeMaker/workSpeedStat</xpath>
+      <value><workSpeedStat>VSE_ArtSpeed</workSpeedStat></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[@Name="ApparelMakeableBase"]/recipeMaker/workSpeedStat</xpath>
+      <value><workSpeedStat>VSE_TailoringSpeed</workSpeedStat></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[@Name="BaseMakeableGun"]/recipeMaker/workSpeedStat</xpath>
+      <value><workSpeedStat>VSE_WeaponCreationSpeed</workSpeedStat></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[@Name="BaseMeleeWeapon"]/recipeMaker/workSpeedStat</xpath>
+      <value><workSpeedStat>VSE_WeaponCreationSpeed</workSpeedStat></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/RecipeDef[defName="Make_ComponentIndustrial"]/workSpeedStat</xpath>
+      <value><workSpeedStat>VSE_ComponentCraftingSpeed</workSpeedStat></value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/RecipeDef[defName="Make_ComponentSpacer"]/workSpeedStat</xpath>
+      <value><workSpeedStat>VSE_ComponentCraftingSpeed</workSpeedStat></value>
+  </Operation>
+  -->
     
-    <Operation Class="PatchOperationAdd">
-      <xpath>/Defs/StatDef[defName="MedicalTendQuality"]/postProcessCurve/points</xpath>
-      <value>
-        <li>(8.0, 2.5)</li>
-      </value>
-    </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="MedicalTendQuality"]/postProcessCurve/points</xpath>
+    <value>
+      <li>(8.0, 2.5)</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="HuntingStealth"]/postProcessCurve/points</xpath>
+    <value>
+      <li>(2.0, 1.0)</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/StatDef[defName="CookSpeed"]postProcessCurve/points</xpath>
+    <value>
+      <li>(40, 2.2)</li>
+      <li>(60, 2.5)</li>
+    </value>
+  </Operation>
 </Patch>

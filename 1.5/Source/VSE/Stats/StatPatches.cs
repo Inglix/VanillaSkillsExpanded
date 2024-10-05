@@ -75,6 +75,7 @@ public static class StatPatches
             if (instruction.Calls(info))
             {
                 yield return new(OpCodes.Ldarg_0);
+                yield return new(OpCodes.Ldarg_1);
                 yield return CodeInstruction.Call(typeof(QualityUtility), nameof(QualityUtility.GenerateQuality));
             }
             else yield return instruction;
@@ -88,6 +89,7 @@ public static class StatPatches
             if (instruction.Calls(info))
             {
                 yield return new(OpCodes.Ldloc, 3);
+                yield return new(OpCodes.Ldnull);
                 yield return CodeInstruction.Call(typeof(QualityUtility), nameof(QualityUtility.GenerateQuality));
             }
             else yield return instruction;

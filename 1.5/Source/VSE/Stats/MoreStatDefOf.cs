@@ -14,6 +14,11 @@ namespace VSE.Stats
         public static StatDef VSE_ConstructQuality;
         public static StatDef VSE_RockChunkChance;
         public static StatDef VSE_FloorSpeed;
+        public static StatDef VSE_CraftingQuality;
+        public static StatDef VSE_TailoringQuality;
+        public static StatDef VSE_SmithingQuality;
+        public static StatDef VSE_MachiningQuality;
+        public static StatDef VSE_FabricationQuality;
 
         static MoreStatDefOf()
         {
