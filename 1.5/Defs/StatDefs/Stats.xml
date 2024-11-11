@@ -100,6 +100,20 @@
     </statFactors>
   </StatDef>
   <StatDef>
+    <defName>VSE_BuildSpeed</defName>
+    <label>building work speed</label>
+    <description>How fast this pawn can build structures.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <toStringStyleUnfinalized>PercentOne</toStringStyleUnfinalized>
+    <disableIfSkillDisabled>Construction</disableIfSkillDisabled>
+    <statFactors>
+      <li>ConstructionSpeed</li>
+    </statFactors>
+  </StatDef>
+  <StatDef>
     <defName>VSE_ConstructQuality</defName>
     <label>construction quality bonus</label>
     <description>A bonus added to the quality of things built by this pawn.</description>
@@ -111,20 +125,7 @@
     <toStringStyleUnfinalized>PercentOne</toStringStyleUnfinalized>
     <disableIfSkillDisabled>Construction</disableIfSkillDisabled>
   </StatDef>
-  <StatDef>
-    <defName>VSE_TailoringSpeed</defName>
-    <label>tailoring speed</label>
-    <description>How fast this pawn tailors clothes.</description>
-    <category>PawnWork</category>
-    <defaultBaseValue>1</defaultBaseValue>
-    <minValue>0</minValue>
-    <toStringStyle>PercentOne</toStringStyle>
-    <toStringStyleUnfinalized>PercentOne</toStringStyleUnfinalized>
-    <disableIfSkillDisabled>Crafting</disableIfSkillDisabled>
-    <statFactors>
-      <li>GeneralLaborSpeed</li>
-    </statFactors>
-  </StatDef>
+  
   <StatDef>
     <defName>VSE_WeaponCreationSpeed</defName>
     <label>weapon creation speed</label>
@@ -178,8 +179,37 @@
     <toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
     <disableIfSkillDisabled>Crafting</disableIfSkillDisabled>
   </StatDef>
+  <StatDef>
+    <defName>VSE_CraftingSpeed</defName>
+    <label>crafting speed</label>
+    <description>How fast this pawn can craft items.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0.1</minValue>
+    <hideAtValue>1</hideAtValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <toStringStyleUnfinalized>PercentTwo</toStringStyleUnfinalized>
+    <disableIfSkillDisabled>Crafting</disableIfSkillDisabled>
+    <statFactors>
+      <li>GeneralLaborSpeed</li>
+    </statFactors>
+  </StatDef>
   
-  <!-- Not using these currently but leaving them here in case I change my mind -->
+  <!-- Individual speed and quality stats for different crafting benches -->
+  <StatDef>
+    <defName>VSE_TailoringSpeed</defName>
+    <label>tailoring speed</label>
+    <description>How fast this pawn tailors clothes.</description>
+    <category>PawnWork</category>
+    <defaultBaseValue>1</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>PercentOne</toStringStyle>
+    <toStringStyleUnfinalized>PercentOne</toStringStyleUnfinalized>
+    <disableIfSkillDisabled>Crafting</disableIfSkillDisabled>
+    <statFactors>
+      <li>GeneralLaborSpeed</li>
+    </statFactors>
+  </StatDef>
   <StatDef>
     <defName>VSE_TailoringQuality</defName>
     <label>tailoring quality bonus</label>

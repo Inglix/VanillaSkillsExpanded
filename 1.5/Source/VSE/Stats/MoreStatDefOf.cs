@@ -19,6 +19,7 @@ namespace VSE.Stats
         public static StatDef VSE_SmithingQuality;
         public static StatDef VSE_MachiningQuality;
         public static StatDef VSE_FabricationQuality;
+        public static StatDef VSE_BuildSpeed;
 
         static MoreStatDefOf()
         {

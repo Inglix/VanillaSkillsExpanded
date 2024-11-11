@@ -1,92 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
+
+  <!-- SHOOTING -->
   <VSE.Expertise.ExpertiseDef>
     <defName>Precision</defName>
     <label>Sharpshooting</label>
-    <description>An expertise in accuracy when firing both high-tech and low-tech ranged weapons.</description>
+    <description>Expertise in accuracy when firing any ranged weapons.</description>
     <skill>Shooting</skill>
     <statOffsets>
-      <ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
+      <ShootingAccuracyPawn>1</ShootingAccuracyPawn>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   <VSE.Expertise.ExpertiseDef>
     <defName>CloseQuarters</defName>
-    <label>Aiming</label>
+    <label>Handling</label>
     <skill>Shooting</skill>
-    <description>An expertise in aiming when firing both high-tech and low-tech ranged weapons.</description>
+    <description>Expertise in efficient handling of ranged weapons.</description>
     <statOffsets>
-      <AimingDelayFactor>-0.05</AimingDelayFactor>
+      <AimingDelayFactor>-0.025</AimingDelayFactor>
+      <RangedCooldownFactor>-0.025</RangedCooldownFactor>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   <VSE.Expertise.ExpertiseDef>
-    <defName>Gunner</defName>
-    <label>Reloading</label>
+    <defName>Mortars</defName>
+    <label>Bombardment</label>
     <skill>Shooting</skill>
-    <description>An expertise in reloading both high-tech and low-tech ranged weapons.</description>
+    <description>Expertise in accuracy with mortars or other indirect fire weapons.</description>
     <statOffsets>
-      <VEF_VerbCooldownFactor>-0.025</VEF_VerbCooldownFactor>
+      <MortarMissRadiusFactor>-0.025</MortarMissRadiusFactor>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
+  
+  <!-- MELEE -->
   <VSE.Expertise.ExpertiseDef>
     <defName>Sharp</defName>
-    <label>Piercing</label>
+    <label>Berserking</label>
     <skill>Melee</skill>
-    <description>An expertise in armor piercing when using sharp melee weapons.</description>
+    <description>Expertise in fighting with a rapid frenzy of powerful blows.</description>
     <statOffsets>
-      <VSE_ArmorPenetrationFactor>0.05</VSE_ArmorPenetrationFactor>
+      <MeleeDamageFactor>0.025</MeleeDamageFactor>
+      <MeleeCooldownFactor>-0.025</MeleeCooldownFactor>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   <VSE.Expertise.ExpertiseDef>
     <defName>Blunt</defName>
     <label>Dueling</label>
     <skill>Melee</skill>
-    <description>An expertise in the fast-paced armed melee combat.</description>
+    <description>Expertise in fighting with precise strikes and nimble dodges.</description>
     <statOffsets>
-      <VSE_MeleeCooldownFactor>-0.025</VSE_MeleeCooldownFactor>
+      <MeleeHitChance>1</MeleeHitChance>
+      <MeleeDodgeChance>1</MeleeDodgeChance>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
-  
-
-  
 
 
   <!-- CONSTRUCTION -->
   <VSE.Expertise.ExpertiseDef>
-    <defName>Flooring</defName>
-    <label>Flooring</label>
+    <defName>Smoothing</defName>
+    <label>Smoothing</label>
     <skill>Construction</skill>
-    <description>An expertise in constructing floors.</description>
+    <description>Expertise in smoothing rough stone surfaces quickly.</description>
     <statOffsets>
-      <VSE_FloorSpeed>0.05</VSE_FloorSpeed>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef>
-    <defName>Repairman</defName>
-    <label>Repairing</label>
-    <skill>Construction</skill>
-    <description>An expertise in repairing broken down and damaged structures.</description>
-    <statOffsets>
-      <FixBrokenDownBuildingSuccessChance>0.05</FixBrokenDownBuildingSuccessChance>
-      <VSE_RepairSpeed>0.05</VSE_RepairSpeed>
-    </statOffsets>
-  </VSE.Expertise.ExpertiseDef>
-  <VSE.Expertise.ExpertiseDef>
-    <defName>Architect</defName>
-    <label>Architecture</label>
-    <skill>Construction</skill>
-    <description>An expertise in creating complex and beautiful buildings.</description>
-    <statOffsets>
-      <ConstructSuccessChance>0.05</ConstructSuccessChance>
-      <VSE_ConstructQuality>0.05</VSE_ConstructQuality>
+      <SmoothingSpeed>0.05</SmoothingSpeed>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   <VSE.Expertise.ExpertiseDef>
     <defName>Foreman</defName>
     <label>Building</label>
     <skill>Construction</skill>
-    <description>An expertise in constructing massive amounts of buildings quickly and efficiently.</description>
+    <description>Expertise in the rapid construction of buildings and structures.</description>
     <statOffsets>
-      <ConstructionSpeed>0.05</ConstructionSpeed>
+      <VSE_BuildSpeed>0.05</VSE_BuildSpeed>
+      <VSE_FloorSpeed>0.05</VSE_FloorSpeed>
+      <VSE_RoofSpeed>0.05</VSE_RoofSpeed>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  <VSE.Expertise.ExpertiseDef>
+    <defName>Architect</defName>
+    <label>Architecture</label>
+    <skill>Construction</skill>
+    <description>Expertise in creating complex and beautiful buildings.</description>
+    <statOffsets>
+      <ConstructSuccessChance>0.01</ConstructSuccessChance>
+      <VSE_ConstructQuality>0.05</VSE_ConstructQuality>
+    </statOffsets>
+  </VSE.Expertise.ExpertiseDef>
+  <VSE.Expertise.ExpertiseDef>
+    <defName>Repairman</defName>
+    <label>Repairing</label>
+    <skill>Construction</skill>
+    <description>Expertise in repairing broken down and damaged structures.</description>
+    <statOffsets>
+      <FixBrokenDownBuildingSuccessChance>0.01</FixBrokenDownBuildingSuccessChance>
+      <VSE_RepairSpeed>0.05</VSE_RepairSpeed>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   
@@ -120,7 +126,7 @@
   </VSE.Expertise.ExpertiseDef>
   <VSE.Expertise.ExpertiseDef>
     <defName>Geologist</defName>
-    <label>Geology</label>
+    <label>Quarrying</label>
     <skill>Mining</skill>
     <description>Expertise in obtaining more stone chunks when mining.</description>
     <statOffsets>
@@ -133,7 +139,7 @@
     <defName>IndustrialChef</defName>
     <label>Culinary</label>
     <skill>Cooking</skill>
-    <description>Expertise in extremely safe and efficient cooking.</description>
+    <description>Expertise in safe and efficient cooking techniques.</description>
     <statOffsets>
       <CookSpeed>1</CookSpeed>
       <FoodPoisonChance>-0.05</FoodPoisonChance>
@@ -143,7 +149,7 @@
     <defName>DrugChef</defName>
     <label>Brewing</label>
     <skill>Cooking</skill>
-    <description>Expertise in preparing simple drug and alcohol products.</description>
+    <description>Expertise in preparing alcohol and simple drug products.</description>
     <statOffsets>
       <DrugCookingSpeed>0.05</DrugCookingSpeed>
     </statOffsets>
@@ -173,7 +179,7 @@
     <defName>GreenThumb</defName>
     <label>Sowing</label>
     <skill>Plants</skill>
-    <description>An expertise in quickly sowing and harvesting large amounts of plants.</description>
+    <description>Expertise in performing farming work quickly and efficiently.</description>
     <statOffsets>
       <PlantWorkSpeed>0.05</PlantWorkSpeed>
     </statOffsets>
@@ -182,7 +188,7 @@
     <defName>HarvesterCareful</defName>
     <label>Harvesting</label>
     <skill>Plants</skill>
-    <description>Expertise in ensuring no parts of the plant are wasted on harvesting.</description>
+    <description>Expertise in maximizing plant yield during harvesting.</description>
     <statOffsets>
       <PlantHarvestYield>0.01</PlantHarvestYield>
     </statOffsets>
@@ -191,7 +197,7 @@
     <defName>Treespeaker</defName>
     <label>Pruning</label>
     <skill>Plants</skill>
-    <description>An expertise in communicating psychically and pruning the Gauranlen trees.</description>
+    <description>Expertise in communing with and pruning Gauranlen trees.</description>
     <statOffsets>
       <PruningSpeed>0.01</PruningSpeed>
     </statOffsets>
@@ -317,10 +323,11 @@
     <defName>Proselytizer</defName>
     <label>Influence</label>
     <skill>Social</skill>
-    <description>Expertise in influencing the opinions and ideological beliefs of others.</description>
+    <description>Expertise in influencing the opinions and beliefs of others.</description>
     <statOffsets>
       <SocialImpact>0.05</SocialImpact>
       <ConversionPower MayRequire="ludeon.rimworld.ideology">0.05</ConversionPower>
+      <SocialIdeoSpreadFrequencyFactor MayRequire="ludeon.rimworld.ideology">0.05</SocialIdeoSpreadFrequencyFactor>
     </statOffsets>
   </VSE.Expertise.ExpertiseDef>
   <VSE.Expertise.ExpertiseDef>
@@ -337,7 +344,7 @@
     <defName>Warden</defName>
     <label>Suppression</label>
     <skill>Social</skill>
-    <description>Expertise in apprehending others and suppressing their will to escape.</description>
+    <description>Expertise in capturing others and breaking their will to escape.</description>
     <statOffsets>
       <ArrestSuccessChance>0.05</ArrestSuccessChance>
       <SuppressionPower MayRequire="ludeon.rimworld.ideology">0.05</SuppressionPower>
@@ -350,7 +357,7 @@
     <defName>Researcher</defName>
     <label>Researching</label>
     <skill>Intellectual</skill>
-    <description>Expertise in performing research and operating scanning equipment.</description>
+    <description>Expertise in research and operating scanning equipment.</description>
     <statOffsets>
       <ResearchSpeed>0.05</ResearchSpeed>
       <EntityStudyRate MayRequire="ludeon.rimworld.anomaly">0.05</EntityStudyRate>

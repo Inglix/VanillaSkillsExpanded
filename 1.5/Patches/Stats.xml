@@ -59,10 +59,16 @@
     </value>
   </Operation>
   <Operation Class="PatchOperationAdd">
-    <xpath>Defs/StatDef[defName="CookSpeed"]postProcessCurve/points</xpath>
+    <xpath>Defs/StatDef[defName="CookSpeed"]/postProcessCurve/points</xpath>
     <value>
       <li>(40, 2.2)</li>
       <li>(60, 2.5)</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/StatDef[defName="MortarMissRadiusFactor"]/toStringStyleUnfinalized</xpath>
+    <value>
+      <toStringStyleUnfinalized>PercentOne</toStringStyleUnfinalized>
     </value>
   </Operation>
 </Patch>
